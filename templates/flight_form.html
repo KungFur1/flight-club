@@ -1,0 +1,131 @@
+
+    {% include "page_start.html" %}
+
+
+        <section class="page-section cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded">
+
+
+
+
+                            <form action="{{ url_for('flightForm') }}" method="post">
+
+                                <!-- City from and city to line -->
+                              <div class="row mb-4">
+                                <div class="col">
+                                  <div class="form-outline">
+                                    <input type="text" id="departure_city" name="departure_city" class="form-control" required />
+                                    <label class="form-label" for="departure_city">Departure city</label>
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="form-outline">
+                                    <input type="text" id="arrival_city" name="arrival_city" class="form-control" required />
+                                    <label class="form-label" for="arrival_city">Arrival city</label>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                                <!-- Earliest departure date and latest departure date -->
+                              <div class="row mb-4">
+                                <div class="col">
+                                  <div class="form-outline">
+                                    <input type="date" id="earliest_departure_date" name="earliest_departure_date" class="form-control" required />
+                                    <label class="form-label" for="earliest_departure_date">Earliest departure date</label>
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="form-outline">
+                                    <input type="date" id="latest_departure_date" name="latest_departure_date" class="form-control" required />
+                                    <label class="form-label" for="latest_departure_date">Latest departure date</label>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                                  <!-- Checkbox -->
+                              <div class="form-check d-flex justify-content-center mb-4">
+                                <input class="form-check-input me-2" type="checkbox" value="" id="round_trip" name="round_trip" checked />
+                                <label class="form-check-label" for="round_trip"> Round trip? (if no leave the two fields below empty) </label>
+                              </div>
+
+
+                                <!-- Shortest stay and longest stay if checkbox is checked -->
+                              <div class="row mb-4">
+                                <div class="col">
+                                  <div class="form-outline">
+                                    <input type="number" id="shortest_stay" name="shortest_stay" class="form-control" />
+                                    <label class="form-label" for="shortest_stay">Minimum amount of days you want to stay</label>
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="form-outline">
+                                    <input type="number" id="longest_stay" name="longest_stay" class="form-control" />
+                                    <label class="form-label" for="longest_stay">Maximum amount of days you want to stay</label>
+                                  </div>
+                                </div>
+                              </div>
+
+                                <!-- Email and highest price -->
+                              <div class="row mb-4">
+                                <div class="col">
+                                  <div class="form-outline">
+                                    <input type="email" id="email" name="email" class="form-control" required />
+                                <label class="form-label" for="email">Email</label>
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <div class="form-outline">
+                                    <input type="number" id="highest_price" name="highest_price" class="form-control" required/>
+                                    <label class="form-label" for="highest_price">Highest price you would pay for this trip EUR</label>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                              <!-- Submit button -->
+                              <button type="submit" class="btn btn-primary btn-block mb-4">Submit data</button>
+
+                            </form>
+
+
+                            <p class="mb-0">
+                                <small><em>Call Anytime</em></small>
+                                <br />
+                                (312) 507-81659
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section about-heading">
+            <div class="container">
+                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="static/assets/img/about.jpg" alt="..." />
+                <div class="about-heading-content">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-10 mx-auto">
+                            <div class="bg-faded rounded p-5">
+                                <h2 class="section-heading mb-4">
+                                    <span class="section-heading-upper">Give Power To The People</span>
+                                    <span class="section-heading-lower">About Our Service</span>
+                                </h2>
+                                <p>Founded in 2023 by the Sanchez brothers, our company has been dedicated to making travel accessible to everyone. After you submit your details we will constantly check for best flight prices and when we find a low enough price we will inform you by email.</p>
+                                <p class="mb-0">
+                                    We guarantee that you will fall in
+                                    <em>love</em>
+                                    with our service.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    {% include "page_end.html" %}

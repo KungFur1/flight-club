@@ -1,0 +1,37 @@
+
+    {% include "page_start.html" %}
+
+
+        <section class="page-section clearfix">
+            <div class="container">
+                <div class="intro">
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="static/assets/img/intro.jpg" alt="..." />
+                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">It`s just so simple</span>
+                            <span class="section-heading-lower">No logins</span>
+                        </h2>
+                        <p class="mb-3">Our system is very easy to use. You will need to give us your email and tell us where you want to travel. And that is it - no logins - no bullshit. Just cheap flights.</p>
+                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="{{ url_for('flightForm') }}">Try it right now!</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded">
+                            <h2 class="section-heading mb-4">
+                                <span class="section-heading-upper">We love you</span>
+                                <span class="section-heading-lower">Free service</span>
+                            </h2>
+                            <p class="mb-0">We think that everyone should be able to afford travelling. That it is why we charge nothing for our cheap flight search engine.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    {% include "page_end.html" %}
